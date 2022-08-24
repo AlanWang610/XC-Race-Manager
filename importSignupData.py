@@ -1,7 +1,7 @@
 import pandas as pd
 import tkinter as tk
-from tkinter import filedialog
-import time
+# from tkinter import filedialog
+# import time
 
 
 # class Runner:
@@ -24,10 +24,14 @@ import time
 
 
 def choose_files():
+    # root = tk.Tk()
+    # root.withdraw()
+    # file_path = filedialog.askopenfilename()
+    # return file_path
+    import tkinter.filedialog as fd
     root = tk.Tk()
-    root.withdraw()
-    file_path = filedialog.askopenfilename()
-    return file_path
+    files = fd.askopenfilenames(parent=root, title='Choose the signup form files')
+    return files
 
 
 def create_school_database():
@@ -60,6 +64,7 @@ def read_individual(file_path, df):
 school_database = create_school_database()
 individual_database = create_individual_database()
 file = choose_files()
-school_database = read_school(file, school_database)
-individual_database = read_individual(file, individual_database)
+for i in range(len(file)):
+    school_database = read_school(file[i], school_database)
+    individual_database = read_individual(file[i], individual_database)
 
