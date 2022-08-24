@@ -67,4 +67,4 @@ file = choose_files()
 for i in range(len(file)):
     school_database = read_school(file[i], school_database)
     individual_database = read_individual(file[i], individual_database)
-
+individual_database['Time'] = [None] * len(individual_database)
