@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/crossCountryMeet.iml" filepath="$PROJECT_DIR$/.idea/crossCountryMeet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/XC-Race-Manager.iml" filepath="$PROJECT_DIR$/.idea/XC-Race-Manager.iml" />
     </modules>
   </component>
 </project>
